@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreotix Innovations Intern</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, rgb(0, 255, 208), rgb(0, 118, 104));
+            background-size: cover;
+            height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            height: 80px;
+        }
+
+        .wed {
+            font-size: 40px;
+            font-weight: bold;
+            color: #0e0505;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 140px); /* Adjusted for footer height */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .login-container {
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            background: linear-gradient(145deg, #fbfbfb7a, #e6e6e6b0);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15), -2px -2px 8px rgba(0, 76, 58, 0.185); 
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -5px 20px rgba(0, 76, 58, 0.185);
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #194b1b;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .login-container h1 {
+            margin-bottom: 10px; 
+            font-size: 24px;
+            font-weight: bold;
+            color: #085a0b;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: none; 
+        }
+
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+            background-color: #f9f9f9;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #134c15;
+            box-shadow: 0 0 10px rgba(12, 45, 13, 0.5);
+            background-color: #fff;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #003623;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .submit-button:active {
+            background-color: #3e8e41;
+            transform: translateY(0);
+        }
+
+        #errorMessage {
+            margin-top: 10px;
+            font-size: 14px;
+            color: red;
+        }
+
+        footer {
+            text-align: center;
+            padding: auto;
+            background-color: transparent;
+            
+            position: relative;
+            bottom: 1%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #ffffff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+    
+
+        @media (orientation: landscape) {
+            body {
+                background: linear-gradient(135deg, rgb(0, 255, 208), rgb(0, 118, 104));
+            }
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background: linear-gradient(135deg, rgb(0, 255, 208), rgb(0, 118, 104));
+            }
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            .wed {
+                font-size: 15px;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .login-container {
+                padding: 18px;
+            }
+
+            .form-group input {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .submit-button {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="KT LOGO.png" alt="Logo" class="logo">
+        <div class="wed">Innovate. Create. Transform.</div>
+    </header>
+    <main>
+        <div class="login-container">
+            
+            <h1>WELCOME INTERNS !</h1>
+            <p></p>
+    
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="button" class="submit-button" onclick="authenticate()">Login</button>
+            </form>
+            <p id="errorMessage" style="display: none;">Invalid username or password. Please try again.</p>
+        </div>
+    </main>
+    <script>
+        
+       function authenticate() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const errorMessage = document.getElementById("errorMessage");
+
+        // Define valid credentials as an array of objects
+        const validCredentials = [
+            { username: "admin1", password: "123", redirect: "team1.html" },
+            { username: "admin2", password: "123", redirect: "team2.html" },
+            { username: "admin3", password: "123", redirect: "team3.html" },
+            { username: "admin4", password: "123", redirect: "team4.html" }
+        ];
+
+        // Check if the entered credentials match any valid credentials
+        const user = validCredentials.find(
+            (cred) => cred.username === username && cred.password === password
+        );
+
+        if (user) {
+            // Redirect to the corresponding page
+            window.location.href = user.redirect;
+        } else {
+            // Show error message if credentials are invalid
+            errorMessage.style.display = "block";
+        }
+    }
+    </script>
+    <footer>
+        <p>&copy; 2025 Kreotix Innovations. All rights reserved.</p>
+</body>
+</html>
